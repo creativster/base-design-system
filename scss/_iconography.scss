@@ -1,0 +1,22 @@
+i, .icon{
+    @each $color, $value in $theme-colors {
+         &-#{$color} {
+             color: $value;
+             &.fill{
+                padding: 0.5em;
+                background: rgba($value,0.3);
+                border-radius: .8em;
+            }
+
+            &.outline{
+                padding: 0.5em;
+                border: 1px $value solid;
+                border-radius: .8em;
+            }
+
+            &.round{
+                border-radius: 50% !important;
+            }
+        }
+    }
+}

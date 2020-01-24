@@ -1,0 +1,127 @@
+@keyframes dropDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown, .dropup {
+    display: inline-flex;
+    align-items: center !important;
+
+    &.is-active, &:hover{
+        .dropdown-menu{
+            display: inline;
+            animation: dropDown .4s 1;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
+
+    &.btn, & button{
+        padding-right: 2.625rem !important;
+        & i {
+            position: absolute;
+            top: .675em;
+            right: 0.8em;
+            margin-top: 1px;
+        }
+
+        &:not(.icon){
+            &:after{
+                position: absolute;
+                top: .875em;
+                right: 1.125em;
+                margin-top: 1px;
+                width: .5em;
+                height: .5em;
+                border-bottom: 2px solid rgba(#000, 0.4);
+                border-left: 2px solid rgba(#000, 0.4);
+                border-top: none;
+                border-right: none;
+                content: '';
+                transition: transform .2s ease;
+                transform: rotate(-45deg);
+                pointer-events: none; 
+            }
+        }
+
+        &-sm{
+            padding-right: 2rem !important;
+            &:not(.icon){
+                &:after{
+                    top: .575em;
+                }
+            }
+            & i{
+                top: .375em;
+            }
+        }
+
+        &-lg{
+            padding-right: 2.875 !important;
+            &:not(.icon){
+                &:after{
+                    top: .875em;
+                }
+            }
+            & i{
+                top: .645em;
+            }
+        }
+    }
+
+    &-menu{
+        animation: dropDown .4s 1;
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        min-width: 14rem;
+        background-color: #fff;
+        border: 0 !important;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0 rgba($primary, 0.04), 0 4px 6px -8px rgba($primary, 0.12), 0 6px 30px -8px rgba($primary, 0.2);
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+
+
+        &.dropdown-item {
+            padding: 1rem;
+            &:focus, &:active{
+                background-color: $primary !important;
+            }
+            &.dropdown-input{
+                background-color: #fff !important;
+                &:hover{
+                    background-color: #fff !important;
+                }
+                & input{
+                    border: 0;
+                    outline: 0;
+                    padding: 0.7rem 0;
+                }
+            }
+        }
+    }
+
+    &-toggle{
+        padding-right: 2.625rem !important;
+        &:not(.icon){
+            &:after{
+                position: absolute;
+                top: .845em;
+                right: 1.125em;
+                margin-top: 1px;
+                width: .5em;
+                height: .5em;
+                border-bottom: 2px solid rgba(#000, 0.4);
+                border-left: 2px solid rgba(#000, 0.4);
+                border-top: none;
+                border-right: none;
+                content: '';
+                transition: transform .2s ease;
+                transform: rotate(-45deg);
+                pointer-events: none; 
+            }
+        }
+    }
+}

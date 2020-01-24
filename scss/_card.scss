@@ -1,0 +1,48 @@
+.card{
+    border-radius: .8em !important;
+    background-color: #fff !important;
+
+    .accordion & {
+        border-radius: 0 !important;
+        &:first-of-type {
+          border-top-left-radius: .8em !important;
+          border-top-right-radius: .8em !important;
+        }
+        &:last-of-type {
+          border-bottom-left-radius: .8em !important;
+          border-bottom-right-radius: .8em !important;
+        }
+    }
+
+    &-header, &-footer {
+        background-color: #fff !important;
+    }
+
+    & img {
+        height: 200px;
+        width: 100%;
+        max-height: 35vh;
+        padding: 0;
+        border-top-left-radius: .7em !important;
+        border-top-right-radius: .7em !important;
+        &.raised {
+            height: 140px;
+            width: 85%;
+            margin: 0 auto;
+            border-radius: .8em !important;
+            margin-top: -2em;
+        }
+    }
+
+    & > *{
+        padding: 1.4rem;
+    }
+
+    &.shadow{
+        box-shadow: 0 15px 35px rgba($primary, 0.1), 0 5px 15px rgba(#fff, 0.07);
+        &-hover:hover {
+            box-shadow: 0 15px 35px rgba($primary, 0.1), 0 5px 15px rgba($primary, 0.07);
+            transition: box-shadow 0.5s ease-out;
+        }
+    }
+}

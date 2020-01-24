@@ -1,0 +1,19 @@
+@each $color, $value in $theme-colors {
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    .bg-#{$color}-gradient {
+        background: linear-gradient(90deg, rgba($value,1) 0%, rgba($value,0.8) 65%, rgba($value,0.65) 100%) !important;
+        &.btn{
+            border: 0 !important;
+            color: #fff !important;
+            transition: box-shadow 0.2s;
+            transition-timing-function: ease-out;
+            &:hover{
+                background: linear-gradient(90deg, rgba($value,1) 0%, rgba($value,0.8) 65%, rgba($value,0.65) 100%) !important;
+                box-shadow: 0 0.1875em 1.125em rgba($value,.6);
+            }
+        }
+    }
+}

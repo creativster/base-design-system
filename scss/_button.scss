@@ -1,0 +1,143 @@
+.btn{
+    height: 2.5em;
+    border-radius: 4px;
+    padding: calc(.25em - 2px) 1em !important;
+    display: inline-flex !important;
+    box-shadow: none;
+    align-items: center !important;
+    color: #000 !important;
+    background: $muted !important;
+    border-color: transparent !important;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+
+    &:focus{
+        background-color: rgba($muted, 0.85);
+    }
+
+    &:hover{
+        background: $muted !important;
+    }
+
+    &:disabled,&[disabled]{
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+
+    &.rounded{
+        border-radius: 20px !important;
+        padding-left: 1.25em !important;
+        padding-right: 1.25em !important;
+    }
+
+    &.loading{
+        padding-left: 2.5em !important;
+        color: rgba($primary, 0.75);
+        position: relative;
+        &:after{
+            border-color: transparent transparent $primary $primary;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 50%;
+            top: calc(50% - .5em);
+            left: .75em;
+            content: "";
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            animation: spinner-border .5s linear infinite; 
+        }
+    }
+
+    &-link{
+        color: $primary !important;
+        background-color: #fff !important;
+        text-decoration: underline !important;
+        &:hover {
+          background-color: #fff !important;
+        }
+    }
+
+    &.icon, & i{
+        width: 1.375em;
+        height: 1em;
+    }
+
+    @each $color, $value in $theme-colors{
+        &-#{$color}{
+            color: $value !important;
+            background: rgba($value, 0.25) !important;
+            border-color: transparent !important;
+            &:hover{
+                background: rgba($value, 0.35) !important;
+            }
+
+            &.loading {
+                color: rgba($value, 0.75) !important;
+                &:after {
+                    border-color: transparent transparent $value $value !important;
+                }
+            }
+
+            &.fill{
+                color: #fff !important;
+                background: $value !important;
+                border-color: transparent !important;
+                &:hover {
+                    background: rgba($value, 0.9) !important;
+                }
+
+                &.loading {
+                    color: #fff !important;
+                    &:after {
+                        border-color: transparent transparent #fff #fff !important;
+                    }
+                }
+            }
+
+            &.outline {
+                color: $value !important;
+                background: #fff !important;
+                border: 2px $value solid !important;
+                &:hover {
+                    background: $value !important;
+                    color: #fff !important; 
+                }
+            }
+
+            &.text {
+                color: $value !important;
+                background: transparent !important;
+                border-color: transparent !important;
+                text-decoration: underline;
+                text-decoration-color: $value; 
+                &:hover {
+                    background: transparent !important;
+                    color: $value !important;
+                    text-decoration: underline !important;
+                    text-decoration-color: rgba($value, 0.4) !important; 
+                }
+            }
+
+            &.glow {
+                position: relative;
+                box-shadow: 0 0.1875em 1.125em rgba($value, 0.6);
+            }
+        }
+    }
+}
+
+a {
+    color: $primary;
+    &:hover {
+      text-decoration: none !important;
+      color: rgba($primary, 0.8);
+    }
+    &.underline {
+      text-decoration: underline;
+        &:hover {
+            text-decoration: underline !important;
+            text-decoration-color: rgba($primary, 0.8) !important;
+        }
+    }
+}

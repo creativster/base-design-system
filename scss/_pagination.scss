@@ -1,0 +1,63 @@
+.pagination {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    & li, &.page-item{
+        display: list-item;
+        &.active{
+            & > *{
+                background-color: $primary;
+                border-color: $primary;
+                color: #fff;
+                box-shadow: 0 7px 14px rgba($primary, 0.1), 0 3px 6px rgba($primary, 0.08);
+            }
+        }
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+            margin: 0 3px;
+            border-radius: 50% !important;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: .875rem;
+            color: $primary;
+        }
+    }
+    &-sm{
+        & li, &.page-item{
+            & > *{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    &-lg{
+        & li, &.page-item{
+            & > *{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    
+    @each $color, $value in $theme-colors{
+        &-#{$color}{
+            & li, &.page-item{
+                &.active{
+                    & > * {
+                        background-color: $value !important;
+                        border-color: $value !important;
+                        color: #fff;
+                        box-shadow: 0 7px 14px rgba($value, 0.1), 0 3px 6px rgba($value, 0.08);
+                    }
+                }
+            }
+        }
+    }
+}

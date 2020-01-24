@@ -1,0 +1,130 @@
+body {
+    font-family: $font-primary !important;
+    color: $primary;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    color: $primary;
+    font-weight: 800 !important;
+}
+  
+span, a {
+    color: $primary;
+}
+  
+p {
+    font-family: $font-secondary !important;
+}
+  
+.font-primary {
+    font-family: $font-primary !important;
+}
+  
+.font-secondary {
+    font-family: $font-secondary !important;
+}
+  
+.underline {
+    position: relative;
+    display: inline-block;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 2px solid;
+        margin-top: 5px;
+        color: $primary;
+        transition: all 0.1s ease;
+    }
+    &:hover{
+        &:before{
+            color: rgba($primary, 0.5);
+            border-width: 1em;
+            transition: all 0.1s ease; 
+        }
+    }
+}
+
+  
+.highlight {
+    border-radius: 1em .25em 1em .25em;
+    background-image: linear-gradient(90deg, rgba($primary, 0.1), rgba($primary, 0.5) 40%, rgba($primary, 0.35) 85%, rgba($primary, 0.15));
+    font-style: normal;
+
+    &-primary {
+        border-radius: 1em .25em 1em .25em;
+        background-image: linear-gradient(90deg, rgba($primary, 0.25), rgba($primary, 0.7) 30%, rgba($primary, 0.5) 95%, rgba($primary, 0.2));
+    }
+}
+  
+.font-weight-300 {
+    font-weight: 300 !important;
+}
+  
+.font-weight-400 {
+    font-weight: 400 !important;
+}
+  
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+  
+.font-weight-600 {
+    font-weight: 600 !important;
+}
+  
+.font-weight-700 {
+    font-weight: 700 !important;
+}
+  
+.font-weight-800 {
+    font-weight: 800 !important;
+}
+  
+.font-weight-900 {
+    font-weight: 900 !important;
+}
+  
+.h1 {
+    font-size: 5vw !important;
+    @include breakpoint(xs){
+        font-size: 15vw !important;
+    }
+}
+
+.h2 {
+    font-size: 4vw !important;
+    @include breakpoint(xs){
+        font-size: 10vw !important;
+    }
+}
+
+.h3 {
+    font-size: 3vw !important;
+    @include breakpoint(xs){
+        font-size: 8vw !important;
+    }
+}
+
+.h4 {
+    font-size: 2.5vw !important;
+    @include breakpoint(xs){
+        font-size: 6.5vw !important;
+    }
+}
+
+.h5 {
+    font-size: 2vw !important;
+    @include breakpoint(xs){
+        font-size: 5vw !important;
+    }
+}
+
+.h6 {
+    font-size: 1rem !important;
+}

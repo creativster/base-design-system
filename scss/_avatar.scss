@@ -1,0 +1,165 @@
+.avatar{
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+    background: $secondary;
+    border-radius: 50%;
+
+    & > div {
+        display: table-cell;
+        overflow: hidden;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        color: white;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+
+    & > img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    & + span {
+        margin-left: 0.875rem;
+    }
+    
+    &-sm{
+        width: 2rem;
+        height: 2rem;
+        font-weight: 700;
+        font-size: .875rem;
+
+        & > * {
+            width: 2rem !important;
+            height: 2rem !important;
+            font-size: .875rem !important;
+        }
+
+        &:after{
+            width: .75rem;
+            height: .75rem;
+            border-width: 2px;
+        }
+
+        & + span {
+            margin-left: 0.75rem;
+        }
+    }
+
+    &-md{
+        width: 4rem;
+        height: 4rem;
+        font-weight: 400;
+        font-size: 1.5rem;
+
+        & > * {
+            width: 4rem !important;
+            height: 4rem !important;
+            font-size: 1.5rem !important;
+        }
+
+        &:after{
+            right: -1px;
+            bottom: -1px;
+            width: 1.0625rem;
+            height: 1.0625rem;
+            border-width: 2px;
+        }
+
+        & + span {
+            margin-left: 1.075rem;
+        }
+    }
+
+    &-lg{
+        width: 5rem;
+        height: 5rem;
+        font-weight: 400;
+        font-size: 1.9rem;
+
+        & > * {
+            width: 5rem !important;
+            height: 5rem !important;
+            font-size: 1.9rem !important;
+        }
+
+        &:after{
+            width: 1.5rem;
+            height: 1.5rem;
+            border-width: 3px;
+        }
+
+        & + span {
+            margin-left: 1.375rem;
+        }
+    }
+
+    &-xl{
+        width: 8rem;
+        height: 8rem;
+        font-weight: 400;
+        font-size: 3.5rem; 
+
+        & > * {
+            width: 8rem !important;
+            height: 8rem !important;
+            font-size: 3.5rem !important;
+        }
+
+        &:after{
+            right: -3px;
+            bottom: -3px;
+            width: 2rem;
+            height: 2rem;
+            border-width: 3px;
+        }
+
+        & + span {
+            margin-left: 1.875rem;
+        }
+    }
+
+    @each $color, $value in $theme-colors {
+        &-status-#{$color} {
+            &:after{
+                position: absolute;
+                right: -2px;
+                bottom: -2px;
+                width: .875rem;
+                height: .875rem;
+                border: 2px solid white;
+                border-radius: 50%;
+                background: $value;
+                content: '';
+            }
+
+            &.avatar-md{
+                &:after{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+            &.avatar-lg{
+                &:after{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+            &.avatar-xl{
+                &:after{
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+            }
+
+        }
+    }
+}

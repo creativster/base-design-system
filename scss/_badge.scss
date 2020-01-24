@@ -1,0 +1,32 @@
+.badge{
+    .btn & {
+        margin-left: .5rem;
+        background-color: $primary;
+        color: #fff;
+        padding: .35rem .375rem;
+        line-height: 1;
+    }
+
+    &.round{
+        border-radius: 50%;
+        padding: 0.5rem;
+        line-height: 0.6em;
+    }
+
+    @each $color, $value in $theme-colors{
+        &-#{$color} {
+            color: #fff !important;
+            background: $value !important;
+            border-color: transparent !important;
+            &.outline{
+                color: $value !important;
+                background: transparent !important;
+                border: 1px $value solid !important;
+                &:hover {
+                    background: $value !important;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+.toggle {
+    position: relative;
+    visibility: hidden;
+    width: 2.125rem;
+    height: 0.95rem;
+    cursor: pointer;
+    &:before {
+        visibility: visible;
+        display: block;
+        position: absolute;
+        content: '';
+        border: 2px $secondary solid;
+        top: 0;
+        left: 0;
+        width: 2.125rem;
+        height: 1.125rem;
+        border-radius: 2rem;
+    }
+    &:after {
+        visibility: visible;
+        position: absolute;
+        display: block;
+        content: '';
+        top: .25rem;
+        left: .25rem;
+        width: .625rem;
+        height: .625rem;
+        border: none;
+        border-radius: 50%;
+        background-color: $primary;
+        transition: left 0.3s cubic-bezier(0.33, 0.79, 0.41, 1.28);
+    }
+
+    &:checked{
+        &:before{
+            border: 2px $primary solid;
+            background-color: $primary;
+        }
+        &:after {
+            visibility: visible;
+            position: absolute;
+            display: block;
+            content: '';
+            left: 1.25rem;
+            background-color: #fff; 
+        }
+    }
+
+    &:disabled, &[disabled]{
+        cursor: not-allowed;
+        &:before {
+            background: rgba($secondary, 0.1);
+            border-color: rgba($secondary, 0.5);
+            cursor: not-allowed;
+        }
+        &:after {
+            background-color: rgba($secondary, 0.5);
+        }
+    }
+    & ~ span {
+        margin-left: 5px;
+    }
+}
+
+.checkbox {
+    position: relative;
+    visibility: hidden;
+    width: 1.5rem;
+    height: 1em;
+    cursor: pointer;
+
+    &:after {
+        visibility: visible;
+        display: block;
+        position: absolute;
+        content: '';
+        border: 2px $secondary solid;
+        top: 0;
+        left: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 3px;
+    }
+
+    &:checked {
+        &:after{
+            visibility: visible;
+            display: block;
+            top: 2px;
+            left: 7px;
+            width: 6px;
+            height: 13px;
+            border: 2px solid #fff !important;
+            border-radius: 0;
+            border-top: 0 !important;
+            border-left: 0 !important;
+            border-width: 0 2px 2px 0;
+            content: "";
+            transform: rotate(40deg);
+        }
+        &:before {
+            visibility: visible;
+            display: block;
+            content: '';
+            background-color: $primary;
+            top: 0px;
+            left: 0px;
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            border-radius: 3px;
+        }
+        &:disabled, &[disabled]{
+            &:before{
+                background-color: rgba($primary, 0.2); 
+            }
+            &:after {
+                border: 2px solid $primary !important;
+                border-top: 0 !important;
+                border-left: 0 !important;
+            }
+        }
+    }
+
+    &:disabled, &[disabled] {
+        cursor: not-allowed;
+        :after{
+            background: rgba($secondary, 0.1);
+            border-color: rgba($secondary, 0.5);
+            cursor: not-allowed; 
+        }
+    }
+    
+    &  ~ span {
+        margin-left: 5px;
+    }
+}
+
+
+  
+.radio {
+    position: relative;
+    visibility: hidden;
+    width: 1.5rem;
+    height: 1em;
+    cursor: pointer;
+
+    & + .radio {
+        margin-left: 1em;
+    }
+    
+    &:before {
+        visibility: visible;
+        display: block;
+        position: absolute;
+        content: '';
+        border: 2px $secondary solid;
+        top: 0;
+        left: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+    }
+    &:checked{
+        &:after {
+            visibility: visible;
+            display: block;
+            content: '';
+            background: $primary;
+            top: 5px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        &:before {
+            border: 2px $primary solid;
+        }
+    }
+
+    &:disabled, &[disabled] {
+        cursor: not-allowed;
+    }
+
+    & ~ span {
+        margin-left: 5px;
+    }
+}

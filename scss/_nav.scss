@@ -1,0 +1,83 @@
+.nav{
+    &.nav{
+        &-under{
+            align-items: center;
+            border-bottom: 1px solid #dfdbe3;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            justify-content: flex-start;
+            list-style: none;
+            .nav-item, li{
+                font-weight: 500;
+                & > * {
+                    align-items: center;
+                    color: $secondary;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: -1px;
+                    padding: .75em 1.125em 1em;
+                    vertical-align: top;
+                    &:hover{
+                        color: $primary !important;
+                    }
+                }
+                &.is-active{
+                    position: relative;
+                    border-bottom-color: transparent;
+                    color: $primary;
+                    & > * {
+                        &:after{
+                            position: absolute;
+                            right: 35%;
+                            bottom: -1px;
+                            left: 35%;
+                            height: 3px;
+                            background-color: $primary;
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+        &-hang{
+            align-items: center;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            justify-content: flex-start;
+            list-style: none;
+            .nav-item, li{
+                font-weight: 500;
+                & > * {
+                    align-items: center;
+                    color: $secondary;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: -1px;
+                    padding: .75em 1.125em 1em;
+                    vertical-align: top;
+                    &:hover{
+                        color: $primary !important;
+                    }
+                }
+                &.is-active{
+                    position: relative;
+                    border-bottom-color: transparent;
+                    color: $primary;
+                    & > * {
+                        &:after{
+                            position: absolute;
+                            right: 35%;
+                            top: -1px;
+                            left: 35%;
+                            height: 3px;
+                            background-color: $primary;
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

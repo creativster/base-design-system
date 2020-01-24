@@ -1,0 +1,32 @@
+$default:           #FF6362 !default;
+$primary:           #202677 !default;
+$secondary:         #C8C3CD !default;
+$success:           #2dce89 !default;
+$info:              #11cdef !default;
+$warning:           #fb6340 !default;
+$danger:            #f5365c !default;
+$muted:             #faf8fc !default;
+$black:             #000 !default;
+
+$gray-100:          #f6f9fc !default;
+$gray-200:          #e9ecef !default;
+$gray-300:          #dee2e6 !default;
+$gray-400:          #ced4da !default;
+$gray-500:          #c0c8cf !default;
+$gray-600:          #9fadbd !default;
+$gray-700:          #525f7f !default;
+$gray-800:          #32325d !default;
+$gray-900:          #212529 !default;
+
+$theme-colors: (
+    "default":      $default,
+    "primary":      $primary,
+    "secondary":    $secondary,
+    "success":      $success,
+    "info":         $info,
+    "warning":      $warning,
+    "danger":       $danger
+);
+
+$font-primary: Averta,Helvetica Neue,Arial,sans-serif;
+$font-secondary: Merriweather,serif;
