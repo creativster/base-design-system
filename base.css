@@ -1392,6 +1392,15 @@ a.underline:hover {
   --color-success: #2dce89;
   --color-warning: #fb6340;
   --color-danger: #f5365c;
+  --color-gray-100: #f6f9fc;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #c0c8cf;
+  --color-gray-600: #9fadbd;
+  --color-gray-700: #525f7f;
+  --color-gray-800: #32325d;
+  --color-gray-900: #212529;
 }
 
 @keyframes dropDown {
