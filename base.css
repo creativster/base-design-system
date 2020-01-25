@@ -2097,25 +2097,14 @@ p {
 }
 
 .underline {
-  position: relative;
-  display: inline-block;
-}
-.underline:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 1em;
-  width: 100%;
-  border-bottom: 2px solid;
-  margin-top: 5px;
-  color: #202677;
-  transition: all 0.1s ease;
-}
-.underline:hover:before {
-  color: rgba(32, 38, 119, 0.5);
-  border-width: 1em;
-  transition: all 0.1s ease;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 143 5' preserveAspectRatio='none'%3E%3Cpath stroke='%23202677' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke-width='3' d='M2,3.10805236 C16.7270144,2.55468328 31.4466455,2.71698891 46.1904884,2.4891529 C77.8182769,2.00040994 101.26734,2.00040994 140.579345,2.4891529'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-size: 100% .125em;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: inherit;
+  font-style: normal;
 }
 
 .highlight {
