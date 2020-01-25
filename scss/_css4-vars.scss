@@ -1,0 +1,10 @@
+:root
+{
+    --color-default: #{$default};
+    --color-primary: #{$primary};
+    --color-secondary: #{$secondary};
+    --color-info: #{$info};
+    --color-success: #{$success};
+    --color-warning: #{$warning};
+    --color-danger: #{$danger};
+}

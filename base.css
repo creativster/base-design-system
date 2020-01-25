@@ -1384,6 +1384,16 @@ a.underline:hover {
   box-shadow: 0 0.1875em 1.125em rgba(245, 54, 92, 0.6);
 }
 
+:root {
+  --color-default: #FF6362;
+  --color-primary: #202677;
+  --color-secondary: #C8C3CD;
+  --color-info: #11cdef;
+  --color-success: #2dce89;
+  --color-warning: #fb6340;
+  --color-danger: #f5365c;
+}
+
 @keyframes dropDown {
   from {
     opacity: 0;
