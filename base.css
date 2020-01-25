@@ -2236,13 +2236,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #202677;
   font-weight: 800 !important;
-  font-family: Merriweather, serif !important;
+  font-family: Averta, Helvetica Neue, Arial, sans-serif !important;
 }
 
 span, a {
-  color: #000;
+  color: #202677;
 }
 
 p {
