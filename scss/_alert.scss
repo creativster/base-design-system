@@ -32,6 +32,7 @@
             }
 
             &.outline{
+                color: $value;
                 background: #fff !important;
                 border: 2px $value solid !important;
                 & > * {
