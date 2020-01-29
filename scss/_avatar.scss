@@ -7,7 +7,7 @@
     background: $secondary;
     border-radius: 50%;
 
-    & > div {
+    & > div, & > * {
         display: table-cell;
         overflow: hidden;
         width: 3rem;
