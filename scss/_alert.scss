@@ -8,6 +8,7 @@
 
     @each $color, $value in $theme-colors {
         &-#{$color} {
+            color: #fff !important;
             background: $value !important;
             border-color: transparent !important;
             & > * {
