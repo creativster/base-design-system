@@ -3,7 +3,8 @@
         margin-left: .5rem;
         background-color: $primary;
         color: #fff;
-        padding: .35rem .375rem;
+        padding: 0.25rem 0.3rem;
+        top: 0px !important;
         line-height: 1;
     }
 
@@ -18,6 +19,11 @@
             color: #fff !important;
             background: $value !important;
             border-color: transparent !important;
+            &.alternative{
+                color: $value !important;
+                background: rgba($value, 0.30) !important;
+                border-color: transparent !important;
+            }
             &.outline{
                 color: $value !important;
                 background: transparent !important;

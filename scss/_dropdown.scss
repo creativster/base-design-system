@@ -84,17 +84,19 @@
         padding-top: .5rem;
 
 
-        &.dropdown-item {
+        .dropdown-item {
             padding: 1rem;
             &:focus, &:active{
                 background-color: $primary !important;
             }
             &.dropdown-input{
+                padding: 0.5rem 1rem;
                 background-color: #fff !important;
+                border-bottom: 1px $secondary solid;
                 &:hover{
                     background-color: #fff !important;
                 }
-                & input{
+                input{
                     border: 0;
                     outline: 0;
                     padding: 0.7rem 0;

@@ -44,6 +44,17 @@
             left: 1.25rem;
             background-color: #fff; 
         }
+        &:disabled, &[disabled]{
+            cursor: not-allowed;
+            &:before {
+                background: rgba($primary, 0.15);
+                border-color: rgba($secondary, 0.5);
+                cursor: not-allowed;
+            }
+            &:after {
+                background-color: rgba($primary, 0.6);
+            }
+        }
     }
 
     &:disabled, &[disabled]{
@@ -57,6 +68,7 @@
             background-color: rgba($secondary, 0.5);
         }
     }
+
     & ~ span {
         margin-left: 5px;
     }
@@ -112,10 +124,10 @@
         }
         &:disabled, &[disabled]{
             &:before{
-                background-color: rgba($primary, 0.2); 
+                background-color: rgba($primary, 0.1); 
             }
             &:after {
-                border: 2px solid $primary !important;
+                border: 2px solid rgba($primary, 0.8) !important;
                 border-top: 0 !important;
                 border-left: 0 !important;
             }
@@ -124,8 +136,8 @@
 
     &:disabled, &[disabled] {
         cursor: not-allowed;
-        :after{
-            background: rgba($secondary, 0.1);
+        &:after{
+            background: rgba($secondary, 0.35);
             border-color: rgba($secondary, 0.5);
             cursor: not-allowed; 
         }
