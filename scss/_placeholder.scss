@@ -1,13 +1,14 @@
 .placeholder{
+    border-radius: 5px;
     &:empty {
         min-height: 1.5em;
-        background-color: rgba($primary, 0.2) !important;
+        background-color: rgba($primary, 0.4) !important;
         background-image: linear-gradient(100deg, rgba($secondary, 0) 0px, rgba($secondary, 0.9) 20%, rgba($secondary, 0) 40%);
         background-size: 200%;
         content: '';
         animation: skeleton-shine 1.8s infinite linear;
         &first-child{
-            background-color: rgba($secondary, 0.2);
+            background-color: rgba($secondary, 0.4);
         }
     }
     .avatar & {

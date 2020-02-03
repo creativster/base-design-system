@@ -1,6 +1,6 @@
 i, .icon{
     @each $color, $value in $theme-colors {
-         &-#{$color} {
+         &-color-#{$color} {
              color: $value;
              &.fill{
                 padding: 0.5em;
@@ -18,5 +18,8 @@ i, .icon{
                 border-radius: 50% !important;
             }
         }
+    }
+    & + *{
+        margin-left: 0.5em;
     }
 }

@@ -20,7 +20,7 @@ Generated using nucleoapp.com
 -------------------------*/
 .icon {
   display: inline-block;
-  font: normal normal normal 1.5rem/1 'Feather';
+  font: normal normal normal 1rem 'Feather';
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -32,12 +32,27 @@ Generated using nucleoapp.com
 -------------------------*/
 /* relative units */
 .icon-sm {
-  font-size: 0.8em;
+  font-size: 0.8rem;
+}
+.icon-md {
+  font-size: 1.5rem;
 }
 .icon-lg {
-  font-size: 1.2em;
+  font-size: 2rem;
+}
+.icon-xl {
+  font-size: 2.5rem;
 }
 /* absolute units */
+.icon-12 {
+  font-size: 12px;
+}
+.icon-24 {
+  font-size: 24px;
+}
+.icon-48 {
+  font-size: 48px;
+}
 .icon-16 {
   font-size: 16px;
 }

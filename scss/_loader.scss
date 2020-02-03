@@ -26,7 +26,7 @@
         animation: jump .6s infinite alternate;
     }
 
-    &:not(.is-inline){
+    &:not(.inline){
         position: absolute;
         top: 0;
         left: 0;
@@ -93,12 +93,12 @@
 @keyframes jumpColorful {
     from {
         opacity: 1;
-        background-color: rgba(32, 38, 119, 0.7);
+        background-color: rgba($primary, 0.7);
         transform: translateY(0);
     }
     to {
         opacity: .3;
-        background-color: rgba(32, 38, 119, 0.3);
+        background-color: rgba($primary, 0.3);
         transform: translateY(-1rem);
     }
 }

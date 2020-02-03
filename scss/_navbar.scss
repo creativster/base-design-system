@@ -1,0 +1,97 @@
+.navbar{
+    padding: 1rem 1.5rem !important;
+
+    .icon, i {
+        top: 0.1em;
+        position: relative;
+    }
+
+    &-toggler{
+        border-color: transparent !important;
+        padding: 0 !important;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-dark{
+        .navbar-nav{
+            .nav-item {
+                .nav-link{
+                    color: rgba(#fff, 0.5);
+                    & > *{
+                        color: rgba(#fff, 0.5);
+                    }
+                }
+                @include breakpoint(xs){
+                    &.dropdown, &.dropup{
+                        display: block !important;
+                        .dropdown-menu{
+                            display: none !important;
+                        }
+                        &.show{
+                            .dropdown-menu{
+                                display: inline !important;
+                            }
+                        }
+                        .dropdown-item{
+                            color: rgba(#fff, 0.5) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            &-icon{
+                transition: background-image 0.2s ease-in-out;
+                background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
+            }
+            &.collapsed{
+                .navbar-toggler-icon{
+                    transition: background-image 0.2s ease-in-out;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-menu'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
+                }
+            }
+        }
+    }
+    &-light{
+        .navbar-nav{
+            .nav-item {
+                .nav-link{
+                    color: rgba(#000, 0.5);
+                    & > *{
+                        color: rgba(#000, 0.5);
+                    }
+                }
+                @include breakpoint(xs){
+                    &.dropdown, &.dropup{
+                        display: block !important;
+                        .dropdown-menu{
+                            display: none !important;
+                        }
+                        &.show{
+                            .dropdown-menu{
+                                display: inline !important;
+                            }
+                        }
+                        .dropdown-item{
+                            color: rgba(#000, 0.5) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            &-icon{
+                transition: background-image 0.2s ease-in-out;
+                background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
+            }
+            &.collapsed{
+                .navbar-toggler-icon{
+                    transition: background-image 0.2s ease-in-out;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-menu'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
+                }
+            }
+        }
+    }
+}

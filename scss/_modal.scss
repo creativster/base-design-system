@@ -1,16 +1,24 @@
 .modal{
     &-content {
-        border-radius: .5em !important;
+        border-radius: .5rem !important;
         border: 0 !important;
         box-shadow: 0 1.5px 2.7px -20px $primary, 0 5px 8.9px -20px rgba($primary, 0.5), 0 10px 30px -20px rgba($primary, 0.9);
     }
+
+    &-body{
+        padding: 2rem 2.5rem !important;
+    }
       
     &-header {
+        border-top-left-radius: .5rem !important;
+        border-top-right-radius: .5rem !important;
         background-color: $muted;
         border: 0 !important;
     }
 
     &-footer {
+        border-bottom-left-radius: .5rem !important;
+        border-bottom-right-radius: .5rem !important;
         background-color: $muted;
         border: 0 !important;
     }
