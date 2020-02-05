@@ -1,3 +1,9 @@
 .progress {
     height: 0.5rem !important;
+    &-label{
+        float: left;
+    }
+    &-percentage{
+        text-align: right;
+    }
 }

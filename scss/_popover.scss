@@ -1,3 +1,10 @@
 .popover {
     border-radius: 0.4rem !important;
+    box-shadow: 0px 0px 35px rgba($primary, 0.3), 0px 5px 15px rgba(#fff, 0.07);
+    border: none !important;
+    .arrow{
+        &:before{
+            border: 0 !important;
+        }
+    }
 }

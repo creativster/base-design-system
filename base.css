@@ -746,7 +746,10 @@
 }
 .btn i, .btn .icon {
   font-size: 1em !important;
-  margin-right: 0.3em;
+}
+.btn-icon {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.75em !important;
 }
 .btn.rounded {
   border-radius: 20px !important;
@@ -2455,14 +2458,42 @@ i + *, .icon + * {
 }
 .popover {
   border-radius: 0.4rem !important;
+  box-shadow: 0px 0px 35px rgba(32, 38, 119, 0.3), 0px 5px 15px rgba(255, 255, 255, 0.07);
+  border: none !important;
+}
+.popover .arrow:before {
+  border: 0 !important;
 }
 
 .progress {
   height: 0.5rem !important;
 }
+.progress-label {
+  float: left;
+}
+.progress-percentage {
+  text-align: right;
+}
 
+.table thead {
+  border-bottom: 1px #C8C3CD solid !important;
+  border-top: 1px #C8C3CD solid !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
 .table thead th {
-  border-bottom-width: 1px !important;
+  color: #202677;
+  border: 0 !important;
+}
+.table tbody tr {
+  border-bottom: 1px #C8C3CD solid !important;
+  border-top: 1px #C8C3CD solid !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.table tbody tr td {
+  color: #202677;
+  border: 0 !important;
 }
 
 .toast-header {
